@@ -5,17 +5,17 @@ import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
 i18n
-    .use(Backend)
-    .use(LanguageDetector)
-    .use(initReactI18next)
-    .init({
-        fallbackLng: 'ru',
-        debug: __IS_DEV__,
-
-        interpolation: {
-            escapeValue: false, // not needed for react as it escapes by default
-        }
+  .use(Backend)
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+      lng: 'ru', // Язык по умолчанию
+      fallbackLng: 'en', // Резервный язык
+      ns: [ 'translation', 'home', 'about' ], // Список namespace
+      defaultNS: 'translation', // Namespace по умолчанию
+      backend: {
+          loadPath: 'locales/{{lng}}/{{ns}}.json', // Путь к файлам перевода
+      }
     });
-
 
 export default i18n;
