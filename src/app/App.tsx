@@ -9,14 +9,14 @@ import { Sidebar } from 'widgets/Sidebar';
 function App() {
     const { theme } = useTheme();
     return (
-      <div className={classNames('app', {}, [theme])}>
+        <div className={classNames('app', {}, [theme])}>
             <Suspense fallback="">
-              <Navbar />
-              <div className="content-page">
+                <Navbar />
+                <div className="content-page">
                     <Sidebar />
                     <AppRouter />
                 </div>
-          </Suspense>
+            </Suspense>
         </div>
     );
 }
