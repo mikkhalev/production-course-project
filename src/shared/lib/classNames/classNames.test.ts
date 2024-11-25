@@ -1,4 +1,4 @@
-import {classNames} from "./classNames";
+import { classNames } from "./classNames";
 
 describe('classNames', () => {
     test('with only first param', () => {
@@ -16,7 +16,7 @@ describe('classNames', () => {
     test('with mods', () => {
         expect(classNames(
             'someClass',
-            {hovered: true, scrollable: true},
+            { hovered: true, scrollable: true },
             ['class1', "class2"]
         )).toBe('someClass class1 class2 hovered scrollable')
     })
@@ -24,7 +24,7 @@ describe('classNames', () => {
     test('with mods false', () => {
         expect(classNames(
             'someClass',
-            {hovered: false, scrollable: true},
+            { hovered: false, scrollable: true },
             ['class1', "class2"]
         )).toBe('someClass class1 class2 scrollable')
     })
@@ -32,7 +32,7 @@ describe('classNames', () => {
     test('with mods undefined', () => {
         expect(classNames(
             'someClass',
-            {hovered: undefined, scrollable: true},
+            { hovered: undefined, scrollable: true },
             ['class1', "class2"]
         )).toBe('someClass class1 class2 scrollable')
     })

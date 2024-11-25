@@ -11,7 +11,6 @@ i18n
     .init({
         lng: 'ru', // Язык по умолчанию
         fallbackLng: 'en', // Резервный язык
-        ns: [ 'translation', 'home', 'about' ], // Список namespace
         defaultNS: 'translation', // Namespace по умолчанию
         backend: {
             loadPath: 'locales/{{lng}}/{{ns}}.json', // Путь к файлам перевода

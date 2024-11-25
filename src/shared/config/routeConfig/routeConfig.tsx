@@ -1,11 +1,13 @@
 import { RouteProps } from 'react-router-dom';
-import MainPage from 'pages/MainPage/ui/MainPage';
-import AboutPage from 'pages/AboutPage/ui/AboutPage';
+import { MainPage } from 'pages/MainPage';
+import { AboutPage } from 'pages/AboutPage';
+import { NotFoundPage } from "pages/NotFoundPage";
 
 export enum AppRoutes {
   // enum (перечисление) — это специальный тип данных, который позволяет создать набор именованных констант.
   MAIN = 'main',
   ABOUT = 'about',
+  NOT_FOUND = 'not_found',
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
@@ -14,6 +16,7 @@ export const RoutePath: Record<AppRoutes, string> = {
     // Record<Keys, Type> позволяет указать типы ключей и значений для объекта.
     [AppRoutes.MAIN]: '/',
     [AppRoutes.ABOUT]: '/about',
+    [AppRoutes.NOT_FOUND]: '*',
 };
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
@@ -24,5 +27,9 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
     [AppRoutes.ABOUT]: {
         path: RoutePath.about,
         element: <AboutPage />,
+    },
+    [AppRoutes.NOT_FOUND]: {
+        path: RoutePath.not_found,
+        element: <NotFoundPage />,
     },
 };

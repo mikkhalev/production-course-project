@@ -36,7 +36,8 @@ module.exports = {
         'import/extensions': 'off',
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
-        'i18next/no-literal-string': ['error', {markupOnly: true}]
+        'i18next/no-literal-string': ['error', { markupOnly: true }],
+        "object-curly-spacing": ["error", "always"]
     },
     globals: {
         __IS_DEV__: true,
