@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { LangSwitcher } from 'widgets/LangSwitcher/LangSwitcher';
 import cls from './Sidebar.module.scss';
+import { BugButton } from "app/providers/ErrorBoundary";
 
 interface SidebarProps {
   className?: string;
@@ -27,7 +28,6 @@ export const Sidebar = ({ className }: SidebarProps) => {
                 <ThemeSwitcher />
                 <LangSwitcher className={cls.lang} />
             </div>
-
         </div>
     );
 };
